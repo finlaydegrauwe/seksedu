@@ -4,8 +4,49 @@
        <meta charset="utf-8">
        <title>My Processing Page</title>
        <script type="text/javascript" src="processing.js"></script>
+<script type="text/processing" data-processing-target="targetcanvas">
+void setup() {
+size(1000,1000);
+noStroke();
+}
+
+boolean oef;
+int count;
+int womanetn = round(random(0, 2));
+int womanetn2 = round(random(0, 2));
+
+void draw(){
+background(255);
+fill(200, 100*womanetn, 100*womanetn2);
+  if (count*3>=255){
+  fill(200, 100*womanetn, 100*womanetn2,10);
+  }
+  rect(0, (height/2)+20+(mouseY/10), width, height);
+fill(count*3,0,0);
+if (count*3>=255){
+  fill(255);
+  }
+ellipse(mouseX-120, mouseY, 300+count, 300+count);
+ellipse(mouseX+120, mouseY, 300+count, 300+count);
+rect(mouseX-100, mouseY+50, 200, 500, 200);
+
+  if (mouseY>300 && mouseX>350 && mouseX<650) {
+    oef = true;
+  }
+  if (mouseY<300 && oef == true) {
+    oef = false;
+    count+=1;
+  }
+
+
+  fill(255, 100*womanetn, 100*womanetn2);
+  rect(-200, (height/2)+(mouseY/12), width-380, height, 100);
+  rect(600, (height/2)+(mouseY/12), width-380, height, 100);
+
+}
+</script>
      </head>
      <body>
-       <canvas id="mysketch" data-processing-sources="seksuelevoorlichtingvoorschevekinderenenadoloscenten.pde"></canvas>    
+       <canvas id="targetcanvas" width="1000" height="1000"></canvas>    
 </body>
    </html>
