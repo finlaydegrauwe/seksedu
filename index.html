@@ -7,7 +7,7 @@
        <script type="text/javascript" src="processing.js"></script>
 <script type="text/processing" data-processing-target="targetcanvas">
 void setup() {
-size(1000,1000);
+size(1000,1000,P2D);
 noStroke();
 noSmooth();
 }
@@ -16,6 +16,7 @@ boolean oef;
 int count;
 int womanetn = round(random(0, 2));
 int womanetn2 = round(random(0, 2));
+PShape penis;
 
 void draw(){
 background(255);
