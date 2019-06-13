@@ -29,9 +29,14 @@ fill(count*3,0,0);
 if (count*3>=255){
   fill(255);
   }
-ellipse(mouseX-120, mouseY, 300+count, 300+count);
-ellipse(mouseX+120, mouseY, 300+count, 300+count);
-rect(mouseX-100, mouseY+50, 200, 500, 200);
+  fill(count, 0, 0);
+  penis = createShape();
+  beginShape();
+  ellipse(mouseX-120, mouseY, 300+count, 300+count);
+  ellipse(mouseX+120, mouseY, 300+count, 300+count);
+  rect(mouseX-100, mouseY+50, 200, 500, 200);
+  endShape();
+  translate(mouseX, mouseY);
 
   if (mouseY<300 && mouseX>350 && mouseX<650) {
     oef = true;
