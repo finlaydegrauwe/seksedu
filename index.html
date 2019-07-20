@@ -29,10 +29,10 @@ if (count*3>=255){
 ellipse(mouseX-120, mouseY, 300+count, 300+count);
 ellipse(mouseX+120, mouseY, 300+count, 300+count);
 rect(mouseX-100, mouseY+50, 200, 500, 200);
-  if (mouseY<300 && mouseX>350 && mouseX<650) {
+  if (mouseY>300 && mouseX>350 && mouseX<650) {
     oef = true;
   }
-  if (mouseY>300 && oef == true) {
+  if (mouseY<300 && oef == true) {
     oef = false;
     count+=1;
   }
