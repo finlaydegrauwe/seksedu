@@ -1,6 +1,12 @@
 * {
   background-color: rgb(255, 255, 255);
   touch-action: none;
+-webkit-user-select: none;
+    -moz-user-select: none;  // this is for mozila firefox
+    -khtml-user-select: none;
+    -webkit-touch-callout: none; // this is for iOS safari
+    -ms-user-select: none;
+    user-select: none;
 }
 
 body {
