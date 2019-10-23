@@ -43,9 +43,10 @@ goFS.addEventListener("touchstart", function() {
 
 function startGame() {
   $("#startscreen").css('z-index', '-1');
-  if (touchenabled) {
+  /*if (touchenabled) {
     document.body.requestFullscreen();
   }
+*/
   mySound = new sound("https://raw.githubusercontent.com/finlaydegrauwe/seksedu/master/oeff.mp3");
   var i = 1;
   var j = 50;
