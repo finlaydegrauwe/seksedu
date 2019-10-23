@@ -230,14 +230,14 @@ function endGame() {
         var posx = Math.floor(Math.random() * (bwidth*2 - 0 + 1));
         var posy = Math.floor(Math.random() * (bheight*2 - 0 +1));
         var size = Math.floor(Math.random() * (bheight - 0 +1));
-        $("#div"+i).css{(
+        $("#div"+i).css({
             "z-index": 5,
             "background-color": "rgb(255,255,220)",
             "border-radius": "50%",
             "width": size+"px",
             "height": size+"px",
             "position": "absolute"
-            )};
+        });
     }
   var endu = 1;
   var endscreen = setInterval(function() {
