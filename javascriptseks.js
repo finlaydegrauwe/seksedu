@@ -223,6 +223,22 @@ function sound(src) {
 
 function endGame() {
   $("#startscreen").css('z-index', '3');
+    for (var i;i<10;i++){
+     var div = document.createElement('div'+i);
+        div.id = i;
+        $("#startscreen").appendChild(div);
+        var posx = Math.floor(Math.random() * (bwidth*2 - 0 + 1));
+        var posy = Math.floor(Math.random() * (bheight*2 - 0 +1));
+        var size = Math.floor(Math.random() * (bheight - 0 +1));
+        $("#div"+i).css{(
+            "z-index": 5,
+            "background-color": "rgb(255,255,220)",
+            "border-radius": "50%",
+            "width": size+"px",
+            "height": size+"px",
+            "position": "absolute"
+            )};
+    }
   var endu = 1;
   var endscreen = setInterval(function() {
     $("#startscreen").css('margin-top', endu);
