@@ -231,6 +231,8 @@ function endGame() {
         var posy = Math.floor(Math.random() * (bheight*2 - 0 +1));
         var size = Math.floor(Math.random() * (bheight - 0 +1));
         $("#div"+i).css({
+            "left": posx+"px",
+            "top": posy+"px",
             "z-index": 5,
             "background-color": "rgb(255,255,220)",
             "border-radius": "50%",
