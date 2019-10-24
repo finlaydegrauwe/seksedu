@@ -6,6 +6,8 @@ var count = 2;
 var pageX, pageY;
 var mySound;
 var longdong = -1;
+var shakeInt;
+var shakeWhile = false;
 var etn1 = Math.floor(Math.random() * (2 - 0 + 1));
 var etn2 = Math.floor(Math.random() * (2 - 0 + 1));
 var goFS = document.getElementById("goFS");
@@ -67,7 +69,7 @@ function startGame() {
       "top": m * 1.12 + ((pageY - bheight) / 30) + "%",
       "border-radius": k + "%",
       "width": j + "vw",
-      "height": l * 1. + "%"
+      "height": l * 1 + "%"
     });
     $(".piemel").css({
       "background-color": "rgb(" + count * 3 + ",0,0)"
@@ -198,6 +200,18 @@ function drawpiemel(pageX, pageY) {
     count += 1;
     mySound.stop();
     mySound.play();
+  }
+    if (count > 30) {
+    shakeWhile = true;
+    var shakeval = (Math.random() * 20)-10;
+    shakeInt = setInterval(function() {
+    if (shakeWhile){
+    $("#startscreen").css('margin-top', shakeval);
+    }
+    },15);
+  }
+   if (count > 45) {
+  shakeWhile = false;
   }
   if (count > 50) {
     started = false;
