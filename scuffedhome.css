@@ -1,0 +1,31 @@
+body{
+  background: black;
+  text-align: center;
+  color:white;
+  font-family:Arial;
+}
+.menuimg{
+  margin-right:5%;
+  margin-left:5%;
+  min-width:80px;
+  max-width:120px;
+}
+#logo {
+  
+}
+#menu {
+  margin: 0 auto;
+  max-height: 200px;
+  max-width:1000px;
+  width: 100%;
+}
+#home {
+  width:100%;
+}
+
+.shopimg {
+  margin:5%;
+}
+#footer {
+  margin:0;
+  }
